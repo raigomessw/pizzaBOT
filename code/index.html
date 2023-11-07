@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pizzabot</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Pizza Order Form</legend>
+      <form id="pizzaForm">
+        <label for="pizzaType">Enter the name of the pizza you want to order today:</label>
+        <input type="text" name="pizzaType" id="pizzaType" placeholder="Enter the name of the pizza"required>
+
+        <label for="pizzaQuantity">How many do you want?</label>
+        <input type="number" id="pizzaQuantity" required />
+
+        <button type="button" onclick="submitOrder()">Place Order</button>
+      </form>
+    </fieldset>
+
+    <div id="response"></div>
+
+    <script src="pizzabot.js"></script>
+  </body>
+</html>
