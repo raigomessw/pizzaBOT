@@ -34,6 +34,10 @@ function submitOrder() {
 
   console.log(orderName);
 
+  if (orderName == "") { 
+    alert("Please enter the name of the pizza you want to order.");
+  }
+
   if (checkOrderName(orderName)) {
     const cost = totalCost(orderQuantity);
     const time = cookingTime(orderQuantity);

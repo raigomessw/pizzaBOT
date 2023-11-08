@@ -3,22 +3,42 @@
   <head>
     <meta charset="utf-8" />
     <title>Pizzabot</title>
+    <link rel="stylesheet" href="pizzaBot.css" />
   </head>
   <body>
-    <fieldset>
-      <legend>Pizza Order Form</legend>
-      <form id="pizzaForm">
-        <label for="pizzaType">Enter the name of the pizza you want to order today:</label>
-        <input type="text" name="pizzaType" id="pizzaType" placeholder="Enter the name of the pizza"required>
+    <fieldset class="form-content">
+      <legend>Pizza Order</legend>
+      <form class="form" id="pizzaForm">
+        <div class="input-box">
+          <label for="pizzaType"
+            >Enter the name of the pizza you want to order today:</label
+          >
+          <input
+            type="text"
+            name="pizzaType"
+            id="pizzaType"
+            placeholder="Enter the name of the pizza"
+            required
+          />
+        </div>
 
-        <label for="pizzaQuantity">How many do you want?</label>
-        <input type="number" id="pizzaQuantity" required />
+        <div class="input-box">
+          <label for="pizzaQuantity">How many do you want?</label>
+          <input
+            type="number"
+            id="pizzaQuantity"
+            placeholder="Enter how many pazzas do you want"
+            min="1"
+            required
+          />
+        </div>
 
-        <button type="button" onclick="submitOrder()">Place Order</button>
+        <button class="btn-submit" type="button" onclick="submitOrder()">
+          Place Order
+        </button>
       </form>
+      <div id="response"></div>
     </fieldset>
-
-    <div id="response"></div>
 
     <script src="pizzabot.js"></script>
   </body>
